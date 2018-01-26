@@ -36,11 +36,12 @@ defmodule ScoutTesting.Mixfile do
       {:phoenix, "~> 1.3.0"},
       {:phoenix_pubsub, "~> 1.0"},
       {:phoenix_ecto, "~> 3.2"},
-      {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
+      {:postgrex, "== 0.13.3"},
+      {:ecto, "== 2.2.7"},
       {:scout_apm, path: "~/Documents/elixir/scout_apm_elixir"}
     ]
   end

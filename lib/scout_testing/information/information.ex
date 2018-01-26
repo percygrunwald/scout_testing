@@ -50,9 +50,11 @@ defmodule ScoutTesting.Information do
 
   """
   def create_user(attrs \\ %{}) do
-    %User{}
-    |> User.changeset(attrs)
-    |> Repo.insert()
+    Repo.transaction fn ->
+      %User{}
+      |> User.changeset(attrs)
+      |> Repo.insert()
+    end
   end
 
   @doc """
