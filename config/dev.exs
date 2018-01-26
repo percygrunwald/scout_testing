@@ -55,4 +55,5 @@ config :scout_testing, ScoutTesting.Repo,
   password: "postgres",
   database: "scout_testing_dev",
   hostname: "localhost",
-  pool_size: 10
+  pool_size: 10,
+  loggers: [{Ecto.LogEntry, :log, []}, {ScoutApm.Instruments.EctoLogger, :log, []}]

@@ -20,6 +20,7 @@ defmodule ScoutTestingWeb do
   def controller do
     quote do
       use Phoenix.Controller, namespace: ScoutTestingWeb
+      use ScoutApm.Instrumentation
       import Plug.Conn
       import ScoutTestingWeb.Router.Helpers
       import ScoutTestingWeb.Gettext
