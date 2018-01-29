@@ -24,6 +24,7 @@ config :logger, :console,
 
 config :scout_apm,
   name: "Scout Test", # The app name that will appear within the Scout UI
+  dev_trace: true
 
 config :phoenix, :template_engines,
   eex: ScoutApm.Instruments.EExEngine,
